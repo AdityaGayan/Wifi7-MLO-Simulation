@@ -1,0 +1,447 @@
+nohup: ignoring input
+MLO Traffic Splitting - Experiment Runner
+  ns3 binary  : /home/anirudh-nayak/ns-3-dev/ns3
+  cache file  : /home/anirudh-nayak/ns-3-dev/scratch/run_cache.json
+  MAX_WORKERS : 6  (set to 1 if crashes persist)
+  N_SEEDS     : 3  (set to 1 for a quick first-pass)
+  nSta=20  cwMin=15  numPkts=200000
+  simtime     : adaptive (10/20/30s based on load)
+
+=== Figure 11: Optimal k2 (20+40 MHz) ===
+  252 jobs: 0 cached, 252 to run (MAX_WORKERS  [1
+  NS3 CRASH rc=-15 bw=20+40 k2=0.00 lam=0.010 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0 | cwMin=15 | perStaMeanInterval=18000 us
+
+  [1/252] bw=20+40 mode=1 k2=0.00 lam=0.010 seed=0 t=15s -> FAILED
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.05 lam=0.010 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0.05 | cwMin=15 | perStaMeanInterval=18000 us
+
+  [2/252] bw=20+40 mode=1 k2=0.05 lam=0.010 seed=1 t=15s -> FAILED
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.00 lam=0.010 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0 | cwMin=15 | perStaMeanInterval=18000 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.00 lam=0.010 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0 | cwMin=15 | perS
+  NS3 CRASH rc=-15 bw=20+20 k2=0.40 lam=0.005 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+n
+  NS3 CRASH rc=-15 bw=20+40 k2=0.05 lam=0.010 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW
+  NS3 CRASH rc=-15 bw=20+20 k2=0.50 lam=0.005 seed=1
+[0/2] Re-checking globbed directories
+  NS3 CRASH rc=-15 bw=20+40 k2=0.05 lam=0.010 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW  [12/195] bw=20+20 mode=0 k2=0.50 lam=0.005 seed=1 t=10s -> FAILED
+  [cache saved: 6 entries]
+  [13/195] bw=20+20 mode=3 k2=0.50 lam=0.005 seed=0 t=10s -> 0.274 ms
+  [14/195] bw=20+20 mode=3 k2=0.50 lam=0.005 seed=2 t=10s -> 0.281 ms
+  [15/195] bw=20+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.10 lam=0.010 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0.1 | cwMin=15 | perStaMeanInterval=18000 us
+
+  [7/252] bw=20+40 mode=1 k2=0.10 lam=0.010 seed=0 t=15s -> FAILED
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.10 lam=0.010 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0.1 | cwMin=15 | perStaMeanInterval=18000 us
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.15 lam=0.010 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0.15 | cwMin=15 | perStaMeanInterval=18000 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.15 lam=0.010 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0.15 | cwMin=15 | perStaMeanInterval=18000 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.10 lam=0.010 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0.1 | cwMin=15 | perStaMeanInterval=18000 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.15 lam=0.010 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.01 | kappa2=0.15 | cwMin=15 | perStaMeanInterval=18000 us
+
+
+  [8/252] bw=20+40 mode=1 k2=0.15 lam=0.010 seed=0 t=15s -> FAILED
+  [9/252] bw=20+40 mode=1 k2=0.10 lam=0.010 seed=1 t=15s -> FAILED
+  [10/252] bw=20+40 mode=1 k2=0.10 lam=0.010 seed=2 t=15s -> FAILED
+  [11/252] bw=20+40 mode=1 k2=0.15 lam=0.010 seed=1 t=15s -> FAILED
+  [12/252] bw=20+40 mode=1 k2=0.15 lam=0.010 seed=2 t=15s -> FAILED
+  [cache saved: 6 entries]
+  [13/252] bw=20+40 mode=1 k2=0.20 lam=0.010 seed=2 t=10s -> 0.327 ms
+  [14/252] bw=20+40 mode=1 k2=0.20 lam=0.010 seed=0 t=10s -> 0.330 ms
+  [15/252] bw=20+40 mode=1 k2=0.20 lam=0.010 seed=1 t=10s -> 0.337 ms
+  [16/252] bw=20+40 mode=1 k2=0.25 lam=0.010 seed=2 t=10s -> 0.313 ms
+  [17/252] bw=20+40 mode=1 k2=0.25 lam=0.010 seed=1 t=10s -> 0.319 ms
+  [18/252] bw=20+40 mode=1 k2=0.25 lam=0.010 seed=0 t=10s -> 0.315 ms
+  [cache saved: 6 entries]
+  [19/252] bw=20+40 mode=1 k2=0.35 lam=0.010 seed=2 t=10s -> 0.285 ms
+  [20/252] bw=20+40 mode=1 k2=0.30 lam=0.010 seed=0 t=10s -> 0.301 ms
+  [21/252] bw=20+40 mode=1 k2=0.30 lam=0.010 seed=2 t=10s -> 0.297 ms
+  [22/252] bw=20+40 mode=1 k2=0.30 lam=0.010 seed=1 t=10s -> 0.300 ms
+  [23/252] bw=20+40 mode=1 k2=0.35 lam=0.010 seed=0 t=10s -> 0.289 ms
+  [24/252] bw=20+40 mode=1 k2=0.35 lam=0.010 seed=1 t=10s -> 0.286 ms
+  [cache saved: 6 entries]
+  [25/252] bw=20+40 mode=1 k2=0.40 lam=0.010 seed=2 t  [34/195] bw=20+20 mode=1 k2=0.00 lam=0.015 seed=0 t=20s -> 0.649 ms
+  [35/195] bw=20+20 mode=1 k2=0.00 lam=0.015 seed=1 t=20s -> 0.651 ms
+  [36/195] bw=20+20 mode=1 k2=0.00 lam=0.015 seed=2 t=20s -> 0.646 ms
+  [cache saved: 6 entries]
+  [37/195] bw=20+20 mode=1 k2=0.40 lam=0.015 seed=2 t=10s -> 0.369 ms
+  [38/195] bw=20+20 mode=0 k2=0.50 lam=0.015 seed=2 t=10s -> 0.357 ms
+  [39/195] bw=20+20 mode=1 k2=0.40 lam=0.015 seed=0 t=10s -> 0.367 ms
+  [40/195] bw=20+20 mode=1 k2=0.40 lam=0.015 seed=1 t=10s -> 0.364 ms
+  [41/195] bw=20+20 mode=0 k2=0.50 lam=0.015 seed=0 t=10s -> 0.356 ms
+  [42/195] bw=20+20 mode=0 k2=0.50 lam=0.015 seed=1 t=10s -> 0.362 ms
+  [cache saved: 6 entries]
+  [43/195] bw=20+20 mode=3 k2=0.50 lam=0.015 seed=2 t=10s -> 0.290 ms
+  [44/195] bw=20+20 mode=3 k2=0.50 lam=0.015 seed=0 t=10s -> 0.289 ms
+  [45/195] bw=20+  [37/252] bw=20+40 mode=1 k2=0.60 lam=0.010 seed=2 t  [46/195] bw=20+20 mode=1 k2=0.00 lam=0.020 seed=1 t=10s -> 3.387 ms
+  [47/195] bw=20+20 mode=1 k2=0.00 lam=0.020 seed=2 t=10s -> 4.295 ms
+  [48/195] bw=20+20 mode=1 k2=0.00 lam=0.020 seed=0 t=10s -> 2.703 ms
+  [cache saved: 6 entries]
+
+  NS3 CRASH rc=-15 bw=20+20 k2=0.40 lam=0.020 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+20 MHz | mode=1 | lambda=0.02 | kappa2=0.4 | cwMin=15 | perStaMeanInterval=9000 us
+
+
+  NS3 CRASH rc=-15 bw=20+20 k2=0.20 lam=0.020 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+20 MHz | mode=1 | lambda=0.02 | kappa2=0.2 | cwMin=15 | perStaMeanInterval=9000 us
+
+
+  NS3 CRASH rc=-15 bw=20+20 k2=0.40 lam=0.020 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+20 MHz | mode=1 | lambda=0.02 | kappa2=0.4 | cwMin=15 | perStaMeanInterval=9000 us
+  [49/195] bw=20+20 mode=1 k2=0.40 lam=0.020 seed=0 t=10s -> FAILED
+  [50/195] bw=20+20 mode=1 k2=0.20 lam=0.020 seed=0 t=20s -> FAILED
+
+
+  NS3 CRASH rc=-15 bw=20+20 k2=0.20 lam=0.020 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+20 MHz | mode=1 | lambda=0.02 | kappa2=0.2 | cwMin=15 | perStaMeanInterval=9000 us
+
+
+  NS3 CRASH rc=-15 bw=20+20 k2=0.40 lam=0.020 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+20 MHz | mode=1 | lambda=0.02 | kappa2=0.4 | cwMin=15 | perStaMeanInterval=9000 us
+
+  [51/195] bw=20+20 mode=1 k2=0.40 lam=0.020 seed=2 t=10s -> FAILED
+  [52/195] bw=20+20 mode=1 k2=0.20 lam=0.020 seed=1 t=20s -> FAILED
+  [53/195] bw=20+20 mode=1 k2=0.40 lam=0.020 seed=1 t=10s -> FAILED
+
+  NS3 CRASH rc=-15 bw=20+20 k2=0.20 lam=0.020 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+20 MHz | mode=1 | lambda=0.02 | kappa2=0.2 | cwMin=15 | perStaMeanInterval=9000 us
+
+  [54/195] bw=20+20 mode=1 k2=0.20 lam=0.020 seed=2 t=20s -> FAILED
+  [cache saved: 6 entries]
+ | lambda=0.04 | kappa2=0.9 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.85 lam=0.040 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.85 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.85 lam=0.040 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.85 | cwMin=15 | perStaMeanInterval=4500 us
+
+  [31/39] bw=20+40 mode=1 k2=0.85 lam=0.040 seed=2 t=20s -> FAILED
+  [32/39] bw=20+40 mode=1 k2=0.90 lam=0.040 seed=2 t=30s -> FAILED
+  [33/39] bw=20+40 mode=1 k2=0.90 lam=0.040 seed=1 t=30s -> FAILED
+  [34/39] bw=20+40 mode=1 k2=0.85 lam=0.040 seed=0 t=20s -> FAILED
+  [35/39] bw=20+40 mode=1 k2=0.85 lam=0.040 seed=1 t=20s -> FAILED
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.90 lam=0.040 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.9 | cwMin=15 | perStaMeanInterval=4500 us
+
+  [36/39] bw=20+40 mode=1 k2=0.90 lam=0.040 seed=0 t=30s -> FAILED
+  [cache saved: 6 entries]
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.95 lam=0.040 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.95 | cwMin=15 | perStaMeanInterval=4500 us
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.95 lam=0.040 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.95 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.95 lam=0.040 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.95 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  [37/39] bw=20+40 mode=1 k2=0.95 lam=0.040 seed=0 t=20s -> FAILED
+  [38/39] bw=20+40 mode=1 k2=0.95 lam=0.040 seed=2 t=20s -> FAILED
+  [39/39] bw=20+40 mode=1 k2=0.95 lam=0.040 seed=1 t=20s -> FAILED
+  [cache saved: 3 entries]
+  Saved: /home/anirudh-nayak/ns-3-dev/scratch/fig3_optimal_kappa.png
+
+Done. Plots saved in: /home/anirudh-nayak/ns-3-dev/scratch
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.9 | cwMin=15 | perStaMeanInterval=4500 us
+
+  [40/45] bw=20+40 mode=1 k2=0.90 lam=0.040 seed=1 t=30s -> FAILED
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.90 lam=0.040 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.9 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.90 lam=0.040 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.9 | cwMin=15 | perStaMeanInterval=4500 us
+
+  [41/45] bw=20+40 mode=1 k2=0.90 lam=0.040 seed=0 t=30s -> FAILED
+  [42/45] bw=20+40 mode=1 k2=0.90 lam=0.040 seed=2 t=30s -> FAILED
+  [cache saved: 6 entries]
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.95 lam=0.040 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.95 | cwMin=15 | perStaMeanInterval=4500 us
+
+  [43/45] bw=20+40 mode=1 k2=0.95 lam=0.040 seed=2 t=20s -> FAILED
+  NS3 CRASH rc=-15 bw=20+40 k2=0.95 lam=0.040 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.95 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.95 lam=0.040 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.95 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  [44/45] bw=20+40 mode=1 k2=0.95 lam=0.040 seed=0 t=20s -> FAILED
+  [45/45] bw=20+40 mode=1 k2=0.95 lam=0.040 seed=1 t=20s -> FAILED
+  [cache saved: 3 entries]
+  Saved: /home/anirudh-nayak/ns-3-dev/scratch/fig3_optimal_kappa.png
+
+Done. Plots saved in: /home/anirudh-nayak/ns-3-dev/scratch
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+  NS3 CRASH rc=-15 bw=20+40 k2=0.85 lam=0.040 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.85 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.85 lam=0.040 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.85 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.85 lam=0.040 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.85 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.90 lam=0.040 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.9 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.90 lam=0.040 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.9 | cwMin=15 | perStaMeanInterval=4500 us
+
+  [157/165] bw=20+40 mode=1 k2=0.85 lam=0.040 seed=1 t=20s -> FAILED
+  [158/165] bw=20+40 mode=1 k2=0.85 lam=0.040 seed=0 t=20s -> FAILED
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.90 lam=0.040 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.9 | cwMin=15 | perStaMeanInterval=4500 us
+
+  [159/165] bw=20+40 mode=1 k2=0.85 lam=0.040 seed=2 t=20s -> FAILED
+  [160/165] bw=20+40 mode=1 k2=0.90 lam=0.040 seed=0 t=30s -> FAILED
+  [161/165] bw=20+40 mode=1 k2=0.90 lam=0.040 seed=2 t=30s -> FAILED
+  [162/165] bw=20+40 mode=1 k2=0.90 lam=0.040 seed=1 t=30s -> FAILED
+  [cache saved: 6 entries]
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.95 lam=0.040 seed=2
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.95 | cwMin=15 | perStaMeanInterval=4500 us
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.95 lam=0.040 seed=0
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.95 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  NS3 CRASH rc=-15 bw=20+40 k2=0.95 lam=0.040 seed=1
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+=== MLO Traffic Splitting ===
+  BW: 20+40 MHz | mode=1 | lambda=0.04 | kappa2=0.95 | cwMin=15 | perStaMeanInterval=4500 us
+
+
+  [163/165] bw=20+40 mode=1 k2=0.95 lam=0.040 seed=0 t=20s -> FAILED
+  [164/165] bw=20+40 mode=1 k2=0.95 lam=0.040 seed=1 t=20s -> FAILED
+  [165/165] bw=20+40 mode=1 k2=0.95 lam=0.040 seed=2 t=20s -> FAILED
+  [cache saved: 3 entries]
+  Saved: /home/anirudh-nayak/ns-3-dev/scratch/fig3_optimal_kappa.png
+
+Done. Plots saved in: /home/anirudh-nayak/ns-3-dev/scratch

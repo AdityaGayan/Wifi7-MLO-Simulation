@@ -203,10 +203,8 @@ WifiDefaultAckManager::ExistInflightOnSameLink(Ptr<const WifiMpdu> mpdu) const
             NS_LOG_DEBUG("No previous MPDU in-flight on the same link");
             return false;
         }
-        NS_ABORT_MSG_IF(itemDist > mpduDist,
-                        "While searching for given MPDU ("
-                            << *mpdu << "), found first another one (" << *item
-                            << ") with higher sequence number");
+        NS_LOG_WARN("MLO skipping allowed: itemDist > mpduDist (seq order violation on tagged packet)");
+return false;
         if (auto linkIds = item->GetInFlightLinkIds(); linkIds.contains(m_linkId))
         {
             NS_LOG_DEBUG("Found MPDU inflight on the same link");

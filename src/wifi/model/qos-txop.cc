@@ -10,7 +10,7 @@
  */
 
 #include "qos-txop.h"
-
+#include "ns3/link-tag.h"
 #include "ap-wifi-mac.h"
 #include "channel-access-manager.h"
 #include "ctrl-headers.h"
@@ -331,20 +331,28 @@ QosTxop::UseExplicitBarAfterMissedBlockAck() const
 {
     return m_useExplicitBarAfterMissedBlockAck;
 }
-
+ 
+// modified this
 bool
 QosTxop::HasFramesToTransmit(uint8_t linkId)
 {
-    // remove MSDUs with expired lifetime starting from the head of the queue
     m_queue->WipeAllExpiredMpdus();
-    auto hasFramesToTransmit = static_cast<bool>(m_queue->PeekFirstAvailable(linkId));
 
-    // Print the number of packets that are actually in the queue (which might not be
-    // eligible for transmission for some reason, e.g., TID not mapped to the link, etc.)
-    NS_LOG_DEBUG(m_ac << " on link " << +linkId << (hasFramesToTransmit ? " has" : " has not")
-                      << " frames to transmit with " << m_queue->GetNPackets()
-                      << " packets in the queue");
-    return hasFramesToTransmit;
+    Ptr<const WifiMpdu> prev = nullptr;
+    while (true)
+    {
+        auto item = m_queue->PeekFirstAvailable(linkId, prev);
+        if (!item) return false;
+
+        LinkTag tag;
+        if (!item->GetPacket()->PeekPacketTag(tag))
+            return true;                    // greedy / no tag
+         if (tag.GetLinkId() == linkId)
+            return true;
+
+        prev = item;   // skip wrong-tagged packet
+    }
+      return m_queue->PeekFirstAvailable(linkId, nullptr) != nullptr;
 }
 
 uint16_t
@@ -381,33 +389,43 @@ QosTxop::IsQosOldPacket(Ptr<const WifiMpdu> mpdu)
                                mpdu->GetHeader().GetSequenceNumber());
 }
 
+// modified this  
 Ptr<WifiMpdu>
 QosTxop::PeekNextMpdu(uint8_t linkId, uint8_t tid, Mac48Address recipient, Ptr<const WifiMpdu> mpdu)
 {
     NS_LOG_FUNCTION(this << +linkId << +tid << recipient << mpdu);
 
-    // lambda to peek the next frame
+    // lambda to peek (keep your existing one exactly as it is)
     auto peek = [this, &linkId, &tid, &recipient, &mpdu]() -> Ptr<WifiMpdu> {
-        if (tid == 8 && recipient.IsBroadcast()) // undefined TID and recipient
-        {
+        if (tid == 8 && recipient.IsBroadcast())
             return m_queue->PeekFirstAvailable(linkId, mpdu);
-        }
+
         WifiContainerQueueId queueId(WIFI_QOSDATA_QUEUE,
-                                     recipient.IsGroup() ? WifiRcvAddr::GROUPCAST
-                                                         : WifiRcvAddr::UNICAST,
-                                     recipient,
-                                     tid);
+                                     recipient.IsGroup() ? WifiRcvAddr::GROUPCAST : WifiRcvAddr::UNICAST,
+                                     recipient, tid);
+
         if (auto mask = m_mac->GetMacQueueScheduler()->GetQueueLinkMask(m_ac, queueId, linkId);
             mask && mask->none())
-        {
             return m_queue->PeekByQueueId(queueId, mpdu);
-        }
+
         return nullptr;
     };
 
     auto item = peek();
-    // remove old packets (must be retransmissions or in flight, otherwise they did
-    // not get a sequence number assigned)
+    if (!item) return nullptr;
+
+    // === SKIPPING LOOP (this is what the paper uses) ===
+    while (item)
+    {
+        LinkTag tag;
+        if (!item->GetPacket()->PeekPacketTag(tag) || tag.GetLinkId() == linkId)
+            break;   // good packet (greedy or correct tag)
+
+        mpdu = item;
+        item = peek();   // skip wrong-tagged packet
+    }
+    if (!item) return nullptr;
+
     while (item && !item->IsFragment())
     {
         if (item->GetHeader().IsCtl() && !item->GetHeader().IsPsPoll())
@@ -625,6 +643,7 @@ QosTxop::GetTxopStartTime(uint8_t linkId) const
     return link.startTxop;
 }
 
+// modified
 void
 QosTxop::NotifyChannelReleased(uint8_t linkId)
 {
@@ -650,10 +669,10 @@ QosTxop::NotifyChannelReleased(uint8_t linkId)
 
     m_queue->WipeAllExpiredMpdus();
     if ((hasTransmitted) ||
-        (!m_queue->IsEmpty() && m_mac->GetChannelAccessManager(linkId)->GetGenerateBackoffOnNoTx()))
+        (HasFramesToTransmit(linkId) && m_mac->GetChannelAccessManager(linkId)->GetGenerateBackoffOnNoTx()))
     {
         GenerateBackoff(linkId);
-        if (!m_queue->IsEmpty())
+        if (HasFramesToTransmit(linkId))
         {
             // if the channel released notification (below) leads the power save manager to put the
             // PHY in sleep state, do not request channel access (which would wake up the PHY)

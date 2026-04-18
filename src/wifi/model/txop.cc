@@ -15,6 +15,7 @@
 #include "wifi-mac-trailer.h"
 #include "wifi-mac.h"
 #include "wifi-phy.h"
+#include "link-tag.h"
 
 #include "ns3/attribute-container.h"
 #include "ns3/log.h"
@@ -581,13 +582,19 @@ Txop::GetTxopLimit(uint8_t linkId) const
     return GetLink(linkId).txopLimit;
 }
 
+//modified this 
+
 bool
 Txop::HasFramesToTransmit(uint8_t linkId)
 {
+   
     m_queue->WipeAllExpiredMpdus();
-    bool ret = static_cast<bool>(m_queue->Peek(linkId));
-    NS_LOG_FUNCTION(this << linkId << ret);
-    return ret;
+    auto item = m_queue->PeekFirstAvailable(linkId);
+   if (!item) return false;
+    LinkTag tag;
+    if (!item->GetPacket()->PeekPacketTag(tag)) return true;
+    return tag.GetLinkId() == linkId;
+
 }
 
 void

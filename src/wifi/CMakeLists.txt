@@ -277,6 +277,7 @@ set(header_files
     model/qos-frame-exchange-manager.h
     model/qos-txop.h
     model/qos-utils.h
+    model/link-tag.h
     model/rate-control/aarf-wifi-manager.h
     model/rate-control/aarfcd-wifi-manager.h
     model/rate-control/amrr-wifi-manager.h
